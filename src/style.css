@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    height:100vh;
+}
+#root{
+    padding:3em 0.5em;
+}
+.box{
+    border-radius:5px;
+    position: relative;
+    background:rgb(145, 143, 143);
+    padding:15px;
+    height:auto;
+}
+.box:not(:nth-child(1)){
+    margin:50px 0;
+}
+.container .one{
+    border-bottom: 2px solid white;
+}
+.container .box::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0.08%;
+    width:5px;
+    height:100%;
+    border-radius: 10px;
+}
+.container .box:nth-child(1)::before,.container .box:nth-child(2)::before{
+    background:rgb(37, 123, 77);
+}
+.one h3{
+    font-size: 2.2vw;
+    transition: all 1s ease;
+}
+.one .imgcontent .span{
+    color:rgb(230, 207, 207);
+    margin:5px 0;
+    display:flex;
+    flex-wrap: wrap;
+    gap:5px;
+    font-size: 1.1vw;
+    transition: all 1s ease;
+}
+.span span:nth-child(2){
+    background:rgb(156, 44, 166);
+    border-radius: 20px;
+    padding:0 10px;
+}
+.span span:nth-child(3){
+    background:rgb(56, 78, 158);
+    border-radius: 20px;
+    padding:0 10px;
+}
+.container .one img{
+    width:75px;
+    height:75px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top:-70px;
+    transition: all 1s ease;
+}
+ul{
+    margin-top:-5px;
+    transition: all 1s ease;
+}
+ul li{
+    font-size: 1.2vw;
+    display: inline-block;
+    margin-right:10px;
+}
+ul li::marker{
+    list-style: circle;
+    color:rgb(214, 211, 211);
+}
+ul li:nth-child(1){
+    list-style: none;
+}
+ul li:nth-child(2){
+    background:rgb(255, 255, 255);
+    padding:0 10px;
+    border-radius: 10px;
+}
+ul li:nth-child(3){
+    background:#262626;
+    padding:0 10px;
+    border-radius: 10px;
+    color:#fff;
+}
+.two ol{
+    font-size: 1.2vw;
+    padding:5px 0;
+    transition: all 1s ease;
+}
+.two ol li{
+    display: inline-block;
+    background:rgb(59, 58, 58);
+    color:rgb(32, 152, 114);
+    padding:5px 10px;
+    border-radius:5px 10px;
+    margin:5px 5px 0 0;
+}
+@media screen and (min-width:599px) {
+    .container .one{
+        border:none;
+    }
+    ul{
+        margin:10px 0;
+    }
+    .one .imgcontent{
+        display: flex;
+        align-items: center;
+        gap:10px;
+        padding:15px;
+    }
+    .container .one img{
+        width:13vw;
+        height:12vw;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top:5px;
+    }
+    .box{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
